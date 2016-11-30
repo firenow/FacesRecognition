@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+
+import face_detector_builder
+import sys
+
+try:
+    face_detector = face_detector_builder.build_model()
+    face_detector.predict_faces()
+
+except:
+    print("an unexpected error: ", sys.exc_info()[0])
+    raise
